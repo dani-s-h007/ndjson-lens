@@ -1,4 +1,4 @@
-# ndjson-lens 👁️
+# ndjson-lens
 
 [![CI](https://github.com/dani-s-h007/ndjson-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/dani-s-h007/ndjson-lens/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -7,11 +7,11 @@
 
 > **Streaming structured log beautifier & latency profiler for Pino, Winston, Zap, and Docker streams.**
 
-Modern cloud and microservice applications output structured JSON/NDJSON. Reading raw single-line JSON logs in terminal windows or Docker outputs is exhausting, and diagnosing which step took 800ms between two log statements requires manually reading millisecond timestamps. `ndjson-lens` formats NDJSON streams in real time with high-visibility ANSI styling, deep payload inspection, and automatic **time delta latency profiling** (`+340ms`, `+2.10s ⚠️`).
+Modern cloud and microservice applications output structured JSON/NDJSON. Reading raw single-line JSON logs in terminal windows or Docker outputs is exhausting, and diagnosing which step took 800ms between two log statements requires manually reading millisecond timestamps. `ndjson-lens` formats NDJSON streams in real time with high-visibility ANSI styling, deep payload inspection, and automatic **time delta latency profiling** (`+340ms`, `+2.10s [WARN]`).
 
 ---
 
-## ✨ Features
+## Features
 
 - **Real-Time Latency Delta Tracking**: Automatically calculates and color-codes the elapsed time between consecutive log messages, pinpointing slow database queries, hanging APIs, or blocked event loops.
 - **Universal Log Support**: Compatible out-of-the-box with Pino, Winston, Bunyan, Go Zap, Python structlog, and custom JSON loggers.
@@ -21,7 +21,7 @@ Modern cloud and microservice applications output structured JSON/NDJSON. Readin
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 # Run on-demand with npx
@@ -33,7 +33,7 @@ npm install -g ndjson-lens
 
 ---
 
-## 🛠️ CLI Usage
+## CLI Usage
 
 ### Pipe from Docker or Process
 ```bash
@@ -58,7 +58,7 @@ cat production.log | ndjson-lens --grep "stripe_webhook"
 
 ---
 
-## 💻 Programmatic TypeScript API
+## Programmatic TypeScript API
 
 ```typescript
 import { formatLogEntry, NdjsonLensTransform } from 'ndjson-lens';
@@ -74,7 +74,7 @@ await pipeline(process.stdin, transform, process.stdout);
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 npm test
@@ -82,7 +82,7 @@ npm test
 
 ---
 
-## 📄 License
+## License
 
 MIT © Essentials Toolkit Authors
 

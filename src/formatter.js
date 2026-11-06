@@ -75,7 +75,7 @@ export function formatLogEntry(obj, options = {}) {
   let deltaStr = '';
   if (options.showDelta && options.deltaMs !== undefined) {
     if (options.deltaMs > 2000) {
-      deltaStr = ` ${COLORS.red}+${(options.deltaMs / 1000).toFixed(2)}s ⚠️${COLORS.reset}`;
+      deltaStr = ` ${COLORS.red}+${(options.deltaMs / 1000).toFixed(2)}s [SLOW]${COLORS.reset}`;
     } else if (options.deltaMs > 500) {
       deltaStr = ` ${COLORS.yellow}+${options.deltaMs}ms${COLORS.reset}`;
     } else {

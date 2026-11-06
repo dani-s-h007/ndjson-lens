@@ -5,7 +5,7 @@
 
 import { formatLogEntry } from '../src/formatter.js';
 
-console.log('\n🚀 Starting ndjson-lens Interactive Demo...\n');
+console.log('\n=== [DEMO] Starting ndjson-lens ===\n');
 
 const mockLogStream = [
   { level: 'info', time: 1700000000000, msg: 'API Gateway received POST /checkout', service: 'gateway' },
@@ -25,5 +25,5 @@ for (const entry of mockLogStream) {
 }
 
 console.log('------------------------------------------------------------');
-console.log('🎉 Demo completed successfully!\n');
+console.log('[SUCCESS] Demo completed successfully.\n');
 
