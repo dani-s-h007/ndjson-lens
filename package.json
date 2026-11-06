@@ -1,0 +1,46 @@
+{
+  "name": "ndjson-lens",
+  "version": "1.0.0",
+  "description": "Streaming structured log beautifier & latency profiler for Pino, Winston, Zap, and Docker streams.",
+  "type": "module",
+  "main": "src/formatter.js",
+  "types": "index.d.ts",
+  "bin": {
+    "ndjson-lens": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node demo/run-demo.js",
+    "start": "node bin/cli.js"
+  },
+  "keywords": [
+    "ndjson",
+    "json-logs",
+    "pino",
+    "winston",
+    "structured-logging",
+    "latency-profiler",
+    "stream",
+    "cli"
+  ],
+  "author": "dani-s-h007 <shanusathar@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dani-s-h007/ndjson-lens.git"
+  },
+  "homepage": "https://github.com/dani-s-h007/ndjson-lens#readme",
+  "bugs": {
+    "url": "https://github.com/dani-s-h007/ndjson-lens/issues"
+  }
+}
